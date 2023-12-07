@@ -18,12 +18,20 @@ public class InitStage {
 
     @FXML
     public void SearchAction(ActionEvent event) {
-        System.out.println("?");
+        Application.launch(searchStage.class);
+        
+    }
+    @FXML
+    public Button search;
+
+    @FXML
+    public void Search(ActionEvent event) {
+
     }
 
     @FXML
     public void Manageaction(ActionEvent event) {
-        System.out.println("!");
+        Application.launch(manageStage.class);
     }
     public static void main(String[] args){
 
