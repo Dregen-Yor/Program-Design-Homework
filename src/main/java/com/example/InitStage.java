@@ -18,9 +18,14 @@ public class InitStage {
 
     @FXML
     public void SearchAction(ActionEvent event) {
-        Application.launch(searchStage.class);
-        
+        try {
+            searchStage searchstage = new searchStage();
+            searchstage.start(new Stage());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
+
     @FXML
     public Button search;
 
