@@ -8,31 +8,24 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-public class InitStage extends Application{
-    @FXML
-    private Button manageAction;
+public class InitStage {
 
     @FXML
-    private Button searchAction;
+    public Button Maction;
 
     @FXML
-    void ManageAction(ActionEvent event) {
+    public Button Saction;
 
+    @FXML
+    public void SearchAction(ActionEvent event) {
+        System.out.println("?");
     }
 
     @FXML
-    void SearchAction(ActionEvent event) {
+    public void Manageaction(ActionEvent event) {
+        System.out.println("!");
+    }
+    public static void main(String[] args){
 
-    }
-    public void start(Stage stage)throws IOException{
-        // FXMLLoader loader = new FXMLLoader(getClass().getResource("InitStage.fxml"));
-        // Scene scene=new Scene(loader.load());
-        stage.setTitle("图书信息管理系统");
-        // stage.setScene(scene);
-        stage.show();
-    }
-    public static void main(String[] args) {
-        launch(args);
     }
 }
-
