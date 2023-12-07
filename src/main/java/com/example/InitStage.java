@@ -18,6 +18,7 @@ public class InitStage {
 
     @FXML
     public void SearchAction(ActionEvent event) {
+        //主页图书信息搜索按钮
         try {
             searchStage searchstage = new searchStage();
             searchstage.start(new Stage());
@@ -31,12 +32,26 @@ public class InitStage {
 
     @FXML
     public void Search(ActionEvent event) {
-
+        //搜索按钮
     }
 
     @FXML
     public void Manageaction(ActionEvent event) {
-        Application.launch(manageStage.class);
+        //主页图书信息管理按钮
+        try{
+            LoginStage stage=new LoginStage();
+            stage.start(new Stage());
+
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+    @FXML
+    public Button log;
+
+    @FXML
+    public void LogIn(ActionEvent event) {
+        //登录页面登录按钮
     }
     public static void main(String[] args){
 

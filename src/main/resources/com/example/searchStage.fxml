@@ -20,5 +20,16 @@
             <Font size="17.0" />
          </font>
       </Label>
+      <Label layoutX="72.0" layoutY="211.0" prefHeight="45.0" prefWidth="124.0" text="根据编号查询">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField layoutX="186.0" layoutY="211.0" prefHeight="45.0" prefWidth="194.0" />
+      <Button fx:id="search1" layoutX="403.0" layoutY="211.0" mnemonicParsing="false" onAction="#Search" prefHeight="45.0" prefWidth="62.0" text="查询">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
