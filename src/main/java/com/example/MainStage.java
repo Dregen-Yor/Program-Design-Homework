@@ -11,14 +11,10 @@ import javafx.scene.Scene;
 
 public class MainStage extends Application{
     public void start(Stage stage)throws Exception{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("InitStage.fxml"));
-        Scene scene=new Scene(loader.load());
-        stage.setTitle("图书信息管理系统");
-        stage.setScene(scene);
-        stage.show();
+        Connect connect=new Connect();
+        connect.connect();
     }
     public static void main(String[] args) {
-
         launch(args);
     }
     // @Override

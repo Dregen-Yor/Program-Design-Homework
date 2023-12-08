@@ -53,6 +53,28 @@ public class InitStage {
     public void LogIn(ActionEvent event) {
         //登录页面登录按钮
     }
+
+    @FXML
+    public Button connectOK;
+
+    @FXML
+    public void ConnectOK(ActionEvent event) {
+        //等待连接页面连接成功按钮
+        Stage now =(Stage)connectOK.getScene().getWindow();
+        now.close();
+        Stage stage=new Stage();
+        try{
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("InitStage.fxml"));
+            Scene scene=new Scene(loader.load());
+            stage.setTitle("图书信息管理系统");
+            stage.setScene(scene);
+            stage.show();
+        }
+        catch(Exception e){
+            
+        }
+        
+    }
     public static void main(String[] args){
 
     }
