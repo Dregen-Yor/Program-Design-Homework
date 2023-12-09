@@ -20,10 +20,13 @@ public class InitStage {
     public Button Maction;
     public Button Saction;
     public Button search;
+    searchStage searchstage;
+    manageStage managestage;
+    LoginStage Loginstage;
     public void SearchAction(ActionEvent event) {
         //主页图书信息搜索按钮
         try {
-            searchStage searchstage = new searchStage();
+            searchstage = new searchStage();
             searchstage.start(new Stage());
         } catch (Exception e) {
             e.printStackTrace();
@@ -40,8 +43,8 @@ public class InitStage {
     public void Manageaction(ActionEvent event) {
         //主页图书信息管理按钮
         try{
-            LoginStage stage=new LoginStage();
-            stage.start(new Stage());
+            Loginstage=new LoginStage();
+            Loginstage.start(new Stage());
 
         }catch(Exception e){
             e.printStackTrace();
@@ -55,10 +58,9 @@ public class InitStage {
         String user = username.getText();
         String Password = password.getText();
         try {
-            Main.connect.sendMessage("logRequest");
-            Main.connect.sendMessage(user);
-            Main.connect.sendMessage(Password);
-        } catch (IOException e) {
+            Loginstage.Loginrequest(user,Password);
+
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

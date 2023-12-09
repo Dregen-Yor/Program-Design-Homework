@@ -14,6 +14,7 @@ public class Connect{
     private DataOutputStream out;
     public void connect(){
         try{
+            //创建等待连接页面
             Stage wait=new Stage();
             FXMLLoader loader=new FXMLLoader(getClass().getResource("WaitStage.fxml"));
             wait.setTitle("等待连接");
@@ -36,14 +37,14 @@ public class Connect{
             Stage success=new Stage();
             success.setTitle("连接成功");
             success.setScene(new Scene(loader.load()));
-            success.show();
+            success.show();//创建登录成功页面
         }
         catch(Exception e){
 
         }
     }
     public Connect(){
-        connect();
+        connect();//方法构造初始化
     }
     public void sendMessage(String message)throws IOException{
         out.writeUTF(message);

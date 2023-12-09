@@ -1,5 +1,7 @@
 package com.example;
 
+import java.io.IOException;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -13,6 +15,18 @@ public class LoginStage extends Application{
         stage.setTitle("登录");
         stage.setScene(scene);
         stage.show();
+    }
+    public void Loginrequest(String user,String Password){
+        try{
+            Main.connect.sendMessage("logRequest");     //发送登录请求
+            Main.connect.sendMessage(user);
+            Main.connect.sendMessage(Password);
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+    }
+    public void getresult(){
+        
     }
     public static void main(String[] args){
         launch(args);
