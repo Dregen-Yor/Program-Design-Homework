@@ -7,7 +7,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="234.0" prefWidth="393.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.InitStage">
    <children>
-      <Label layoutX="76.0" layoutY="88.0" text="等待连接......">
+      <Label layoutX="77.0" layoutY="88.0" text="等待连接......">
          <font>
             <Font size="44.0" />
          </font>

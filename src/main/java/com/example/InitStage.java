@@ -6,17 +6,20 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 public class InitStage {
 
     @FXML
+    public TextField ac_Bookid;
+    public TextField ac_Bookname;
+    public PasswordField password;
+    public TextField username;
     public Button Maction;
-
-    @FXML
     public Button Saction;
-
-    @FXML
+    public Button search;
     public void SearchAction(ActionEvent event) {
         //主页图书信息搜索按钮
         try {
@@ -26,9 +29,7 @@ public class InitStage {
             e.printStackTrace();
         }
     }
-
-    @FXML
-    public Button search;
+    
 
     @FXML
     public void Search(ActionEvent event) {
@@ -51,7 +52,15 @@ public class InitStage {
 
     @FXML
     public void LogIn(ActionEvent event) {
-        //登录页面登录按钮
+        String user = username.getText();
+        String Password = password.getText();
+        try {
+            Main.connect.sendMessage("logRequest");
+            Main.connect.sendMessage(user);
+            Main.connect.sendMessage(Password);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
@@ -71,7 +80,7 @@ public class InitStage {
             stage.show();
         }
         catch(Exception e){
-            
+            e.printStackTrace();
         }
         
     }

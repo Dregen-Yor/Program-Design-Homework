@@ -10,8 +10,8 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="401.0" prefWidth="367.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.InitStage">
    <children>
-      <TextField layoutX="117.0" layoutY="99.0" prefHeight="44.0" prefWidth="163.0" />
-      <PasswordField layoutX="117.0" layoutY="187.0" prefHeight="44.0" prefWidth="163.0" />
+      <TextField fx:id="username" layoutX="117.0" layoutY="99.0" prefHeight="44.0" prefWidth="163.0" />
+      <PasswordField fx:id="password" layoutX="117.0" layoutY="187.0" prefHeight="44.0" prefWidth="163.0" />
       <Label layoutX="38.0" layoutY="99.0" prefHeight="44.0" prefWidth="78.0" text="用户名：">
          <font>
             <Font size="19.0" />
