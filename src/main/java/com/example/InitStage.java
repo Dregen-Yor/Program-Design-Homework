@@ -20,13 +20,13 @@ public class InitStage {
     public Button Maction;
     public Button Saction;
     public Button search;
-    searchStage searchstage;
-    manageStage managestage;
-    LoginStage Loginstage;
+    searchStage searchstage=new searchStage();
+    manageStage managestage=new manageStage();
+    LoginStage Loginstage=new LoginStage();
     public void SearchAction(ActionEvent event) {
         //主页图书信息搜索按钮
         try {
-            searchstage = new searchStage();
+            // searchstage = new searchStage();
             searchstage.start(new Stage());
         } catch (Exception e) {
             e.printStackTrace();
@@ -43,7 +43,6 @@ public class InitStage {
     public void Manageaction(ActionEvent event) {
         //主页图书信息管理按钮
         try{
-            Loginstage=new LoginStage();
             Loginstage.start(new Stage());
 
         }catch(Exception e){
@@ -57,9 +56,16 @@ public class InitStage {
     public void LogIn(ActionEvent event) {
         String user = username.getText();
         String Password = password.getText();
+        System.out.println(user+" "+Password);
         try {
             Loginstage.Loginrequest(user,Password);
-
+            if(Loginstage.getresult()){
+                managestage = new manageStage();
+                managestage.start(new Stage());
+            }
+            else{
+                System.out.println("登录失败");
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }

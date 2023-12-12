@@ -50,6 +50,8 @@ public class Connect{
         out.writeUTF(message);
     }
     public String getMessage()throws IOException{
-        return in.readUTF();
+        String res=in.readUTF();
+        System.out.println(res);
+        return res;
     }
 }

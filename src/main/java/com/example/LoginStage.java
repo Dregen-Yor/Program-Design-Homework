@@ -25,8 +25,13 @@ public class LoginStage extends Application{
             e.printStackTrace();
         }
     }
-    public void getresult(){
-        
+    public boolean getresult()throws IOException{
+        if(Main.connect.getMessage().equals("true")){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
     public static void main(String[] args){
         launch(args);
