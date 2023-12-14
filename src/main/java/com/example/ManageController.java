@@ -7,9 +7,33 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 public class ManageController {
+
+    @FXML
+    public Button Addbook;
+
+    @FXML
+    public TextField BookaddressText;
+
+    @FXML
+    public TextField BooknameText;
+
+    @FXML
+    public TextField BookauthorText;
+
+    @FXML
+    public TextField BookidText;
+
+    @FXML
+    public TextField BookcountText;
+
+    @FXML
+    void Add(ActionEvent event) {
+
+    }
 
     @FXML
     public TableView<ShowBook> Table;
@@ -57,6 +81,11 @@ public class ManageController {
         Bookcount.setCellValueFactory(new PropertyValueFactory<>("Bookcount"));
 
         Table.setItems(BookList);
+    }
+    public void refresh() throws Exception{
+        Table.getItems().clear();
+        loadData();
+        loadData();
     }
     public static void main(String[] args){
         //launch(args);
