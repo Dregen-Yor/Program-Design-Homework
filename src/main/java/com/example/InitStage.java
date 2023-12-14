@@ -10,6 +10,8 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 public class InitStage {
 
     @FXML
@@ -32,7 +34,8 @@ public class InitStage {
             e.printStackTrace();
         }
     }
-    
+    @FXML
+    public ImageView tsxt;
 
     @FXML
     public void Search(ActionEvent event) {
@@ -82,6 +85,7 @@ public class InitStage {
         Stage stage=new Stage();
         try{
             FXMLLoader loader = new FXMLLoader(getClass().getResource("InitStage.fxml"));
+            // tsxt.setImage(new Image(getClass().getResource("gull.jpg").toExternalForm()));
             Scene scene=new Scene(loader.load());
             stage.setTitle("图书信息管理系统");
             stage.setScene(scene);
