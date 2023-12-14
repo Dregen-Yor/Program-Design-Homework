@@ -5,13 +5,13 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="686.0" prefWidth="846.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ManageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="686.0" prefWidth="846.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.NewBookcontroller">
    <children>
-      <TextField fx:id="Bookname" layoutX="266.0" layoutY="57.0" prefHeight="57.0" prefWidth="249.0" />
-      <TextField fx:id="Bookaddress" layoutX="266.0" layoutY="367.0" prefHeight="57.0" prefWidth="249.0" />
-      <TextField fx:id="Bookauthor" layoutX="266.0" layoutY="259.0" prefHeight="57.0" prefWidth="249.0" />
-      <TextField fx:id="Bookid" layoutX="266.0" layoutY="152.0" prefHeight="57.0" prefWidth="249.0" />
-      <TextField fx:id="Bookcount" layoutX="266.0" layoutY="477.0" prefHeight="57.0" prefWidth="249.0" />
+      <TextField fx:id="BooknameText" layoutX="266.0" layoutY="57.0" prefHeight="57.0" prefWidth="249.0" />
+      <TextField fx:id="BookaddressText" layoutX="266.0" layoutY="367.0" prefHeight="57.0" prefWidth="249.0" />
+      <TextField fx:id="BookauthorText" layoutX="266.0" layoutY="259.0" prefHeight="57.0" prefWidth="249.0" />
+      <TextField fx:id="BookidText" layoutX="266.0" layoutY="152.0" prefHeight="57.0" prefWidth="249.0" />
+      <TextField fx:id="BookcountText" layoutX="266.0" layoutY="477.0" prefHeight="57.0" prefWidth="249.0" />
       <Label layoutX="154.0" layoutY="62.0" prefHeight="45.0" prefWidth="112.0" text="书名：">
          <font>
             <Font size="36.0" />

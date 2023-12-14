@@ -1,5 +1,9 @@
 package com.example;
 
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -11,29 +15,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 public class ManageController {
-
-    @FXML
-    public Button Addbook;
-
-    @FXML
-    public TextField BookaddressText;
-
-    @FXML
-    public TextField BooknameText;
-
-    @FXML
-    public TextField BookauthorText;
-
-    @FXML
-    public TextField BookidText;
-
-    @FXML
-    public TextField BookcountText;
-
-    @FXML
-    public void Add(ActionEvent event) {
-
-    }
 
     @FXML
     public TableView<ShowBook> Table;
@@ -48,18 +29,25 @@ public class ManageController {
     public TableColumn<ShowBook, String> Bookaddress;
 
     @FXML
-    public Button NewBook;
-
-    @FXML
     public TableColumn<ShowBook, String> Bookname;
 
     @FXML
     public TableColumn<ShowBook, Integer> Bookcount;
 
     @FXML
+    public Button NewBook;
     public void newbook(ActionEvent event) {
         //新建图书
-
+        Stage stage=new Stage();
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("addBook.fxml"));
+        try{
+            Scene scene=new Scene(loader.load());
+            stage.setTitle("新建图书");
+            stage.setScene(scene);
+            stage.show();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
     }
     ObservableList<ShowBook> BookList = FXCollections.observableArrayList();
     @FXML
