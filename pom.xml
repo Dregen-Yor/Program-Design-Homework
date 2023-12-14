@@ -14,7 +14,7 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <javafx.version>14.0.2.1</javafx.version>
-        <mainClassName>com.example.HelloFX</mainClassName>
+        <mainClassName>com.example.Main</mainClassName>
     </properties>
 
     <dependencies>

@@ -7,46 +7,58 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 public class ManageController {
 
     @FXML
-    private TableView<Book> Table;
+    public TableView<ShowBook> Table;
 
     @FXML
-    private TableColumn<Book, String> Bookauthor;
+    public TableColumn<ShowBook, String> Bookauthor;
 
     @FXML
-    private TableColumn<Book, Integer> Bookid;
+    public TableColumn<ShowBook, Integer> Bookid;
 
     @FXML
-    private TableColumn<Book, String> Bookaddress;
+    public TableColumn<ShowBook, String> Bookaddress;
 
     @FXML
-    private Button NewBook;
+    public Button NewBook;
 
     @FXML
-    private TableColumn<Book, String> Bookname;
+    public TableColumn<ShowBook, String> Bookname;
 
     @FXML
-    private TableColumn<Book, Integer> Bookcount;
+    public TableColumn<ShowBook, Integer> Bookcount;
 
     @FXML
-    void newbook(ActionEvent event) {
+    public void newbook(ActionEvent event) {
+        //新建图书
 
     }
-    ObservableList<Book> BookList = FXCollections.observableArrayList();
+    ObservableList<ShowBook> BookList = FXCollections.observableArrayList();
     @FXML
     public void initialize() throws Exception{
         loadData();
     }
     public void loadData() throws Exception{
+        // System.out.println("success");
         Main.connect.sendMessage("getBookInfo");
         Book now=(Book) Main.connect.getObject();
         while(now!=null){
-            BookList.add(now);
+            BookList.add(new ShowBook(now));
             now=(Book) Main.connect.getObject();
         }
+        Bookname.setCellValueFactory(new PropertyValueFactory<>("Bookname"));
+        Bookid.setCellValueFactory(new PropertyValueFactory<>("Bookid"));
+        Bookauthor.setCellValueFactory(new PropertyValueFactory<>("Bookauthor"));
+        Bookaddress.setCellValueFactory(new PropertyValueFactory<>("Bookaddress"));
+        Bookcount.setCellValueFactory(new PropertyValueFactory<>("Bookcount"));
+
         Table.setItems(BookList);
+    }
+    public static void main(String[] args){
+        //launch(args);
     }
 }

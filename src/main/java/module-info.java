@@ -3,11 +3,12 @@ module com.example {
     requires javafx.fxml;
     // requires javafx.media;
 
-
+    opens com.example to javafx.base;
 //    opens com.teach.bookcode to javafx.fxml;
 //    opens com.teach.bookcode.javafx.appendixh to javafx.fxml;
 //    exports com.teach.bookcode;
     exports com.example;
+    
     // exports com.teach.bookcode.javafx.chap04;
     // exports com.teach.bookcode.javafx.chap05;
     // exports com.teach.bookcode.javafx.chap06;

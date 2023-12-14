@@ -29,7 +29,7 @@ public class Connect{
                     socket=new Socket("127.0.0.1",1503);
                     break;
                 }catch(Exception e){
-                    System.out.println("连接失败");
+                    // System.out.println("连接失败");
                 }
             }
             wait.close();
