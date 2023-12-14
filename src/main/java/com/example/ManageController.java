@@ -31,7 +31,7 @@ public class ManageController {
     public TextField BookcountText;
 
     @FXML
-    void Add(ActionEvent event) {
+    public void Add(ActionEvent event) {
 
     }
 
