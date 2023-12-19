@@ -18,7 +18,7 @@ public class ManageController {
 
     @FXML
     public TableView<ShowBook> Table;
-
+    public NewBookcontroller newBookcontroller=null;
     @FXML
     public TableColumn<ShowBook, String> Bookauthor;
 
@@ -45,6 +45,8 @@ public class ManageController {
             stage.setTitle("新建图书");
             stage.setScene(scene);
             stage.show();
+            newBookcontroller=loader.getController();
+            newBookcontroller.setTableController(this);
         }catch(Exception e){
             e.printStackTrace();
         }
@@ -72,7 +74,6 @@ public class ManageController {
     }
     public void refresh() throws Exception{
         Table.getItems().clear();
-        loadData();
         loadData();
     }
     public static void main(String[] args){
