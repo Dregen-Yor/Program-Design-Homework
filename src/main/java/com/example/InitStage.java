@@ -22,6 +22,7 @@ public class InitStage {
     public Button Maction;
     public Button Saction;
     public Button search;
+    public Button search1;
     searchStage searchstage=new searchStage();
     manageStage managestage=new manageStage();
     LoginStage Loginstage=new LoginStage();
@@ -38,8 +39,22 @@ public class InitStage {
     public ImageView tsxt;
 
     @FXML
-    public void Search(ActionEvent event) {
+    public void SearchName(ActionEvent event) {
         //搜索按钮
+        String name=ac_Bookname.getText();
+        try{
+            searchstage.searchname(name);
+
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        
+    }
+    @FXML
+    public void SearchId(ActionEvent event) {
+        //搜索按钮id
+        String id=ac_Bookid.getText();
+        searchstage.searchId(id);
     }
 
     @FXML
