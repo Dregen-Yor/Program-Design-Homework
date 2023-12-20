@@ -80,6 +80,8 @@ public class InitStage {
             if(Loginstage.getresult()){
                 managestage = new manageStage();
                 managestage.start(new Stage());
+                Stage now=(Stage)log.getScene().getWindow();
+                now.close();
             }
             else{
                 System.out.println("登录失败");
