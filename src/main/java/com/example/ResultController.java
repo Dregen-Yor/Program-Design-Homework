@@ -31,8 +31,6 @@ public class ResultController {
         loadData();
     }
     public void loadData() throws Exception{
-        // System.out.println("success");
-        Main.connect.sendMessage("getBookInfo");
         BookList = FXCollections.observableArrayList();
         Book now=(Book) Main.connect.getObject();
         while(now!=null){
