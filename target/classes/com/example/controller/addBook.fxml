@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="686.0" prefWidth="846.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controller.NewBookcontroller">
+   <children>
+      <TextField fx:id="BooknameText" layoutX="266.0" layoutY="57.0" prefHeight="57.0" prefWidth="249.0" />
+      <TextField fx:id="BookaddressText" layoutX="266.0" layoutY="367.0" prefHeight="57.0" prefWidth="249.0" />
+      <TextField fx:id="BookauthorText" layoutX="266.0" layoutY="259.0" prefHeight="57.0" prefWidth="249.0" />
+      <TextField fx:id="BookidText" layoutX="266.0" layoutY="152.0" prefHeight="57.0" prefWidth="249.0" />
+      <TextField fx:id="BookcountText" layoutX="266.0" layoutY="477.0" prefHeight="57.0" prefWidth="249.0" />
+      <Label layoutX="154.0" layoutY="62.0" prefHeight="45.0" prefWidth="112.0" text="书名：">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="154.0" layoutY="157.0" prefHeight="45.0" prefWidth="112.0" text="编号：">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="154.0" layoutY="264.0" prefHeight="45.0" prefWidth="112.0" text="作者：">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="154.0" layoutY="372.0" prefHeight="45.0" prefWidth="112.0" text="地址：">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="154.0" layoutY="482.0" prefHeight="45.0" prefWidth="112.0" text="数量：">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="Addbook" layoutX="593.0" layoutY="547.0" mnemonicParsing="false" onAction="#Add" prefHeight="83.0" prefWidth="159.0" text="添加">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

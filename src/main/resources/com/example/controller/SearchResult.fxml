@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="554.0" prefWidth="861.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controller.ResultController">
+   <children>
+      <TableView fx:id="Table" prefHeight="554.0" prefWidth="861.0">
+         <columns>
+            <TableColumn fx:id="Bookname" prefWidth="146.82356148958206" text="书名" />
+            <TableColumn fx:id="Bookid" prefWidth="110.52098846435547" text="编号" />
+            <TableColumn fx:id="Bookauthor" prefWidth="132.302490234375" text="作者" />
+            <TableColumn fx:id="Bookaddress" prefWidth="303.3277587890625" text="地址" />
+            <TableColumn fx:id="Bookcount" prefWidth="167.7982177734375" text="数量" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>
