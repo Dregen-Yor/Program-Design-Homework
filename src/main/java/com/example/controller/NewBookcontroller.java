@@ -29,6 +29,7 @@ public class NewBookcontroller {
         Book book = new Book(Bookname, Integer.parseInt(Bookid), Bookauthor,  Bookaddress,Integer.parseInt(Bookcount));
         try{
             HttpMethod.addBook(book);
+            manageController.refresh();
         }catch( Exception e){
             e.printStackTrace();
         }

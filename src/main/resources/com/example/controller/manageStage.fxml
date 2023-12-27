@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import java.lang.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="596.0" prefWidth="889.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controller.ManageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="596.0" prefWidth="889.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controller.ManageController">
    <children>
       <TableView fx:id="Table" layoutX="101.0" layoutY="65.0" prefHeight="466.0" prefWidth="687.0">
         <columns>
@@ -18,5 +17,7 @@
         </columns>
       </TableView>
       <Button fx:id="NewBook" layoutX="101.0" layoutY="24.0" mnemonicParsing="false" onAction="#newbook" text="新增书籍" />
+      <Button fx:id="DeleteBook" layoutX="217.0" layoutY="24.0" mnemonicParsing="false" onAction="#deleteBook" text="删除书籍" />
+      <Button fx:id="ModifyBook" layoutX="341.0" layoutY="24.0" mnemonicParsing="false" onAction="#ModifyBook" text="修改书籍" />
    </children>
 </AnchorPane>

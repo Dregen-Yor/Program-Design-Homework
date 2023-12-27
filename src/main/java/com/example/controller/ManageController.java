@@ -37,6 +37,11 @@ public class ManageController {
 
     @FXML
     public Button NewBook;
+    @FXML
+    public Button DeleteBook;
+
+    @FXML
+    public Button ModifyBook;
     public void newbook(ActionEvent event) {
         //新建图书
         Stage stage=new Stage();
@@ -58,8 +63,6 @@ public class ManageController {
         loadData();
     }
     public void loadData() throws Exception{
-        // System.out.println("success");
-        // Main.connect.sendMessage("getBookInfo");
         ArrayList booklist=HttpMethod.getAll("all");
         for(int i=0;i<booklist.size();i++){
             Book now = (Book)booklist.get(i);
@@ -76,6 +79,37 @@ public class ManageController {
     public void refresh() throws Exception{
         Table.getItems().clear();
         loadData();
+    }
+    @FXML
+    void ModifyBook(ActionEvent event) {
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("choiceStage2.fxml"));
+        try{
+            Scene scene=new Scene(loader.load());
+            Stage stage=new Stage();
+            stage.setTitle("选择要修改的图书");
+            stage.setScene(scene);
+            stage.show();
+            choice2 choice2=loader.getController();
+            choice2.setTableController(this);
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    void deleteBook(ActionEvent event) {
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("choiceStage.fxml"));
+        try{
+            Scene scene=new Scene(loader.load());
+            Stage stage=new Stage();
+            stage.setTitle("选择要删除的图书");
+            stage.setScene(scene);
+            stage.show();
+            choice choice=loader.getController();
+            choice.setTableController(this);
+        }catch(Exception e){
+            e.printStackTrace();
+        }
     }
     public static void main(String[] args){
         //launch(args);

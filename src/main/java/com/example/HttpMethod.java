@@ -52,7 +52,19 @@ public class HttpMethod {
     }
     public static void addBook(Book book){
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(serverUrl + "/auth/addBook"))
+                .uri(URI.create(serverUrl + "/auth/addbook"))
+                .POST(BodyPublishers.ofString(gson.toJson(book))) // Use the correct method
+                .headers("Content-Type", "application/json")
+                .build();
+        try{
+            HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    public static void deleteBook(Book book){
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create(serverUrl + "/auth/delete"))
                 .POST(BodyPublishers.ofString(gson.toJson(book))) // Use the correct method
                 .headers("Content-Type", "application/json")
                 .build();
