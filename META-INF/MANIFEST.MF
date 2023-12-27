@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Main-Class: com.example.Main
+Class-Path: javafx-base-14.0.2.1.jar javafx-controls-14.0.2.1-win.jar ja
+ vafx-fxml-14.0.2.1.jar javafx-graphics-14.0.2.1.jar javafx-base-14.0.2.
+ 1-win.jar javafx-fxml-14.0.2.1-win.jar javafx-graphics-14.0.2.1-win.jar
+  javafx-controls-14.0.2.1.jar gson-2.8.6.jar annotations-24.1.0.jar
+

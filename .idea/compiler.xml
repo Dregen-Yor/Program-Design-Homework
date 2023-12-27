@@ -12,7 +12,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="program_design_homework" options="--add-exports com.google.gson/com.google.gson.internal=com.example" />
+      <module name="program_design_homework" options="" />
     </option>
   </component>
 </project>

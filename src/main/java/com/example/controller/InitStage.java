@@ -46,26 +46,5 @@ public class InitStage {
             e.printStackTrace();
         }
     }
-    @FXML
-    public Button connectOK;
 
-    @FXML
-    public void ConnectOK(ActionEvent event) {
-        //等待连接页面连接成功按钮
-        Stage now =(Stage)connectOK.getScene().getWindow();
-        now.close();
-        Stage stage=new Stage();
-        try{
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("InitStage.fxml"));
-            // tsxt.setImage(new Image(getClass().getResource("gull.jpg").toExternalForm()));
-            Scene scene=new Scene(loader.load());
-            stage.setTitle("图书信息管理系统");
-            stage.setScene(scene);
-            stage.show();
-        }
-        catch(Exception e){
-            e.printStackTrace();
-        }
-        
-    }
 }

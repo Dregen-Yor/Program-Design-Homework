@@ -1,0 +1,28 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="program_design_homework:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/program_design_homework_jar</output-path>
+    <root id="archive" name="program_design_homework.jar">
+      <element id="module-output" name="program_design_homework" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-base/14.0.2.1/javafx-base-14.0.2.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-controls/14.0.2.1/javafx-controls-14.0.2.1-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-fxml/14.0.2.1/javafx-fxml-14.0.2.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/14.0.2.1/javafx-graphics-14.0.2.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-base/14.0.2.1/javafx-base-14.0.2.1-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-fxml/14.0.2.1/javafx-fxml-14.0.2.1-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.8.6/gson-2.8.6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/14.0.2.1/javafx-graphics-14.0.2.1-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-controls/14.0.2.1/javafx-controls-14.0.2.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/jetbrains/annotations/24.1.0/annotations-24.1.0.jar" path-in-jar="/" />
+      <element id="library" level="project" name="Maven: com.google.code.gson:gson:2.8.6" />
+      <element id="library" level="project" name="Maven: org.jetbrains:annotations:24.1.0" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-base:14.0.2.1" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-base:win:14.0.2.1" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-controls:14.0.2.1" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-controls:win:14.0.2.1" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-fxml:14.0.2.1" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-fxml:win:14.0.2.1" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-graphics:14.0.2.1" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-graphics:win:14.0.2.1" />
+    </root>
+  </artifact>
+</component>
