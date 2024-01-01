@@ -1,14 +1,23 @@
 package com.example.controller;
 
-import com.example.Book;
+import com.example.Base.*;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 import com.example.HttpMethod;
+
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import javafx.util.StringConverter;
 
 public class NewBookcontroller {
 
@@ -17,16 +26,17 @@ public class NewBookcontroller {
     public TextField BookaddressText;
     public TextField BooknameText;
     public TextField BookauthorText;
-    public TextField BookidText;
     public TextField BookcountText;
-    public ManageController manageController;
+    @FXML
+    private ChoiceBox<BookType> typeChoiceBox;
+    public BookframeController manageController;
     public void Add(ActionEvent event) {
         String Bookname = BooknameText.getText();
         String Bookauthor = BookauthorText.getText();
-        String Bookid = BookidText.getText();
         String Bookcount = BookcountText.getText();
         String Bookaddress = BookaddressText.getText();
-        Book book = new Book(Bookname, Integer.parseInt(Bookid), Bookauthor,  Bookaddress,Integer.parseInt(Bookcount));
+        BookType BookType=typeChoiceBox.getValue();
+        Book book = new Book(Bookname, Bookauthor,  Bookaddress,Integer.parseInt(Bookcount),BookType.getId());
         try{
             HttpMethod.addBook(book);
             manageController.refresh();
@@ -40,9 +50,29 @@ public class NewBookcontroller {
         }catch(Exception e){
             e.printStackTrace();
         }
+        
     }
-    public void setTableController(ManageController manageController){
+    public void setTableController(BookframeController manageController){
         this.manageController=manageController;
+    }
+    ObservableList<BookType> typeList = FXCollections.observableArrayList();
+    public void initialize(){
+        ArrayList<BookType> types=HttpMethod.getallType();
+        for(int i=0;i<types.size();i++){
+            typeList.add(types.get(i));
+        }
+        typeChoiceBox.setItems(typeList);
+        typeChoiceBox.setConverter(new StringConverter<BookType>() {
+            @Override
+            public String toString(BookType object) {
+                return object.getName();
+            }
+
+            @Override
+            public BookType fromString(String string) {
+                return null;
+            }
+        });
     }
     
 }
