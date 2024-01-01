@@ -98,16 +98,15 @@ public class borrowFrameController {
     }
     @FXML
     public void onRefresh(ActionEvent event){
+        userquery=-1;
+        bookquery="";
         refresh();
     }
     void refresh(){
         Table.getItems().clear();
         bookChoice.getItems().clear();
         userChoice.getItems().clear();
-        userquery=-1;
-        bookquery="";
         loadData();
-        
     }
     public void loadData(){
         this.books=HttpMethod.getAllBook("");

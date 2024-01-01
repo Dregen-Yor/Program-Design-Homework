@@ -297,12 +297,12 @@ public class BookframeController {
     }
     public void refresh()throws Exception{
         Table.getItems().clear();
-        queryName="";
-        queryType=-1;
         loadData();
     }
     @FXML
     public void onRefresh(ActionEvent event)throws Exception{
+        queryName="";
+        queryType=-1;
         refresh();
     }
 }

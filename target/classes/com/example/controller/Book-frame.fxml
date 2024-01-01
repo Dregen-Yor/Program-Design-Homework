@@ -50,7 +50,7 @@
             <Pane prefHeight="40.0" prefWidth="17.0" />
             <Button fx:id="choice" mnemonicParsing="false" onAction="#onChoice" text="筛选" />
             <Pane prefHeight="40.0" prefWidth="17.0" />
-            <Button fx:id="onRefresh" mnemonicParsing="false" text="刷新" />
+            <Button mnemonicParsing="false" onAction="#onRefresh" text="刷新" />
          </children>
       </FlowPane>
    </top>

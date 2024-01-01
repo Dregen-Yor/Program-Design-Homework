@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.Pane?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="558.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controller.borrowFrameController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="558.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controller.BookframeController">
    <center>
       <TableView fx:id="Table" prefHeight="511.0" prefWidth="803.0" BorderPane.alignment="CENTER">
         <columns>
@@ -28,12 +28,12 @@
             <Label fx:id="lb1" text="根据用户查询：" />
             <ChoiceBox fx:id="userChoice" prefHeight="20.0" prefWidth="106.0" />
             <Pane prefHeight="33.0" prefWidth="12.0" />
-            <Button fx:id="button1" mnemonicParsing="false" onAction="#onQueryuser" text="查询" />
+            <Button fx:id="button1" mnemonicParsing="false" onAction="#onQuery1" text="查询" />
             <Pane prefHeight="33.0" prefWidth="162.0" />
             <Label text="根据书籍查询：" />
             <ChoiceBox fx:id="bookChoice" prefHeight="26.0" prefWidth="105.0" />
             <Pane prefHeight="33.0" prefWidth="12.0" />
-            <Button fx:id="button2" mnemonicParsing="false" onAction="#onQuerybook" text="查询" />
+            <Button fx:id="button2" mnemonicParsing="false" onAction="#onQuery2" text="查询" />
             <Pane prefHeight="33.0" prefWidth="65.0" />
             <Button mnemonicParsing="false" onAction="#onRefresh" text="刷新" />
          </children>
