@@ -11,6 +11,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;
@@ -73,6 +74,9 @@ public class RegController {
             return;
         }
         HttpMethod.register(new LoginRequest(username, password));
+        MessageDialog.showDialog("注册成功，请登录");
+        Stage now =(Stage)reg.getScene().getWindow();
+        now.close();
     }
 
     @FXML
