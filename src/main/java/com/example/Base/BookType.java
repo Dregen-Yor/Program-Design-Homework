@@ -25,11 +25,11 @@ public class BookType implements Serializable{
     }
 
     public void setName(String name) {
-        name = name;
+        this.name = name;
     }
 
     public void setId(Integer id) {
-        id = id;
+        this.id = id;
     }
 
     public Map toMap(){

@@ -7,6 +7,8 @@ import javafx.scene.control.TextField;
 
 import com.example.HttpMethod;
 import com.example.Base.BookType;
+import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 public class editTypeController {
 
@@ -34,6 +36,8 @@ public class editTypeController {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        Stage now =(Stage)modifyButton.getScene().getWindow();
+        now.fireEvent(new WindowEvent(now, WindowEvent.WINDOW_CLOSE_REQUEST));
     }
     private boolean module;
     public void setOrigin(BookType origin) {

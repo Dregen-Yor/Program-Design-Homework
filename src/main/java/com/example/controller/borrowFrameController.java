@@ -93,6 +93,7 @@ public class borrowFrameController {
             lb1.setVisible(false);
             userChoice.setVisible(false);
             button1.setVisible(false);
+            userquery=Appstore.getId();
         }
         loadData();
     }
@@ -119,9 +120,13 @@ public class borrowFrameController {
             userlist.add(users.get(i));
         }
         bookChoice.setItems(booklist);
+        bookChoice.setValue(new Book());
         bookChoice.setConverter(new StringConverter<Book>() {
             @Override
             public String toString(Book object) {
+                if(object==null){
+                    return "";
+                }
                 return object.getBookname();
             }
 
@@ -132,9 +137,13 @@ public class borrowFrameController {
         });
 
         userChoice.setItems(userlist);
+        userChoice.setValue(new UserInfo());
         userChoice.setConverter(new StringConverter<UserInfo>() {
             @Override
             public String toString(UserInfo object) {
+                if(object==null){
+                    return "";
+                }
                 return object.getUsername();
             }
 

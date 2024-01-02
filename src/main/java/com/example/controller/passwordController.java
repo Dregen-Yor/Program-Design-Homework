@@ -9,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 public class passwordController {
 
@@ -46,7 +47,7 @@ public class passwordController {
         UserInfo user=new UserInfo(Appstore.getName(),Appstore.getPass(),Appstore.getRole(),Appstore.getId());
         HttpMethod.modifyPassword(user);
         Stage now = (Stage) ok.getScene().getWindow();
-        now.close();
+        now.fireEvent(new WindowEvent(now, WindowEvent.WINDOW_CLOSE_REQUEST));
     }
 
 }

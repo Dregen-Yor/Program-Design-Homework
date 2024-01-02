@@ -9,6 +9,7 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 /**
  * MessageController 登录交互控制类 对应 base/message-dialog.fxml
@@ -44,7 +45,7 @@ public class MessageController {
     @FXML
     public void okButtonClick(){
         Main.setCanClose(true);
-        stage.close();
+        stage.fireEvent(new WindowEvent(stage, WindowEvent.WINDOW_CLOSE_REQUEST));
     }
     public Stage getStage() {
         return stage;

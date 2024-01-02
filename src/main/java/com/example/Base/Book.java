@@ -26,6 +26,12 @@ public class Book implements Serializable{
         this.bookType=BookType;
     }
     public Book(){
+        this.bookaddress=new String();
+        this.bookauthor=new String();
+        this.bookname=new String();
+        this.bookid=0;
+        this.bookcount=0;
+        this.bookType=0;
 
     }
     public int getBookcount() {

@@ -34,7 +34,10 @@ public class History implements Serializable{
         this.status=status;
     }
     public History(){
-
+        this.book=0;
+        this.status="";
+        this.time="";
+        this.user=0;
     }
     public int getUser() {
         return user;

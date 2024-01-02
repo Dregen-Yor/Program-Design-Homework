@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 public class newUserController {
 
@@ -37,6 +38,6 @@ public class newUserController {
         }
         HttpMethod.register(new LoginRequest(username, password));
         Stage now = (Stage) newuser.getScene().getWindow();
-        now.close();
+        now.fireEvent(new WindowEvent(now, WindowEvent.WINDOW_CLOSE_REQUEST));
     }
 }

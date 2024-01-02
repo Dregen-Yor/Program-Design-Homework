@@ -252,6 +252,11 @@ public class HttpMethod {
                 .POST(BodyPublishers.ofString(gson.toJson(bookType)))// Use the correct method
                 .headers("Content-Type", "application/json")
                 .build();
+        try{
+            HttpResponse<String> response =client.send(request,HttpResponse.BodyHandlers.ofString());
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     public static ArrayList<UserInfo> getAllusers(){

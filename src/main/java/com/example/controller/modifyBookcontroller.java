@@ -13,6 +13,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 public class modifyBookcontroller {
 
@@ -47,7 +48,7 @@ public class modifyBookcontroller {
         HttpMethod.modifyBook(book);
         try{
             Stage now=(Stage)Addbook.getScene().getWindow();
-            now.close();
+            now.fireEvent(new WindowEvent(now, WindowEvent.WINDOW_CLOSE_REQUEST));
             // manageController.refresh();
         }catch(Exception e){
             e.printStackTrace();

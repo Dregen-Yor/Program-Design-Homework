@@ -21,6 +21,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.MapValueFactory;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.util.StringConverter;
 
 public class BookframeController {
 
@@ -173,18 +174,21 @@ public class BookframeController {
         }
         
     }
-    
+    ObservableList<BookType> typeList = FXCollections.observableArrayList();
     public void loadData() throws Exception{
         Table.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
         ArrayList<BookType> types=HttpMethod.getallType();
-        ObservableList<BookType> typeList = FXCollections.observableArrayList();
         for(int i=0;i<types.size();i++){
             typeList.add(types.get(i));
         }
         typeChoice.setItems(typeList);
-        typeChoice.setConverter(new javafx.util.StringConverter<BookType>() {
+        typeChoice.setValue(new BookType());
+        typeChoice.setConverter(new StringConverter<BookType>() {
             @Override
             public String toString(BookType object) {
+                if(object==null){
+                    return "";
+                }
                 return object.getName();
             }
             @Override
@@ -297,6 +301,7 @@ public class BookframeController {
     }
     public void refresh()throws Exception{
         Table.getItems().clear();
+        typeChoice.getItems().clear();
         loadData();
     }
     @FXML
@@ -305,4 +310,5 @@ public class BookframeController {
         queryType=-1;
         refresh();
     }
+
 }

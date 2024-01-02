@@ -16,6 +16,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -293,11 +294,11 @@ public class adminFrameController {
     public void logout(){
         try {
             Stage now =Main.getMainStage();
+            now.fireEvent(new WindowEvent(now, WindowEvent.WINDOW_CLOSE_REQUEST));
             Stage stage = new Stage();
-            Scene scene = new Scene(FXMLLoader.load(getClass().getResource("loginStage.fxml")));
+            Scene scene = new Scene(FXMLLoader.load(Main.class.getResource("loginStage.fxml")));
             stage.setTitle("登录");
             stage.setScene(scene);
-            now.close();
             Main.setMainStage(stage);
             stage.show();
         } catch (Exception e) {

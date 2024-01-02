@@ -31,6 +31,10 @@ public class UserInfo implements Serializable {
     }
 
     public UserInfo() {
+        this.username = "";
+        this.password = "";
+        this.level="user";
+        this.userId=0;
     }
 
     public int getUserId() {

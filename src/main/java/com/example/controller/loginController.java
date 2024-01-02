@@ -15,6 +15,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 public class loginController {
     public PasswordField password;
@@ -40,7 +41,8 @@ public class loginController {
                 stage.show();
                 stage.setMaximized(true);
                 Stage now=(Stage)log.getScene().getWindow();
-                now.close();
+                Main.setMainStage(stage);
+                now.fireEvent(new WindowEvent(now, WindowEvent.WINDOW_CLOSE_REQUEST));
             }
             else{
                 MessageDialog.showDialog("登录失败");

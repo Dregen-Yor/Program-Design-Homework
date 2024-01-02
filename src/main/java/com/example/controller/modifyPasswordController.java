@@ -14,6 +14,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 public class modifyPasswordController {
 
@@ -54,7 +56,10 @@ public class modifyPasswordController {
             refresh();
             return;
         }
+        user.setPassword(password);
         HttpMethod.modifyPassword(user);
+        Stage now = (Stage)newButton.getScene().getWindow();
+        now.fireEvent(new WindowEvent(now, WindowEvent.WINDOW_CLOSE_REQUEST));
     }
 
     public void setUser(UserInfo user) {

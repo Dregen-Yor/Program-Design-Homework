@@ -48,11 +48,16 @@ public class typeFrameController {
             stage.setTitle("新增种类");
             stage.setScene(scene);
             stage.initOwner(Main.getMainStage());
-            stage.setOnCloseRequest(even1t -> {
-                loadData();
+            stage.setOnCloseRequest(event1 -> {
+                try{
+                    this.refresh();
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
             });
             editTypeController controller=loader.getController();
             controller.setModule(false);
+            controller.setOrigin(new BookType());
             stage.show();
         } catch (Exception e) {
             e.printStackTrace();
@@ -79,9 +84,12 @@ public class typeFrameController {
             editTypeController controller=loader.getController();
             controller.setOrigin(bookType);
             controller.setModule(true);
-            controller.setOrigin(new BookType());
             stage.setOnCloseRequest(event -> {
-                loadData();
+                try{
+                    this.refresh();
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
             });
             stage.show();
         } catch (Exception e) {
@@ -105,7 +113,8 @@ public class typeFrameController {
         Table.setItems(list);
     }
     public void refresh(){
-        Table.getItems().clear();
+        this.Table.getItems().clear();
+        list.clear();
         loadData();
     }
     @FXML
