@@ -66,6 +66,9 @@ public class NewBookcontroller {
         typeChoiceBox.setConverter(new StringConverter<BookType>() {
             @Override
             public String toString(BookType object) {
+                if(object==null){
+                    return "";
+                }
                 return object.getName();
             }
 
