@@ -81,7 +81,7 @@ public class History implements Serializable{
         Map map=new HashMap();
         map.put("user",HttpMethod.searchUserInfo(this.getUser()).getUsername());
         map.put("time",time);
-        map.put("book",HttpMethod.getBook(book));
+        map.put("book",HttpMethod.getBook(book).getBookname());
         map.put("status",status);
         map.put("id",id);
         return map;
