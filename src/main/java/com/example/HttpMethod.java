@@ -155,7 +155,7 @@ public class HttpMethod {
             e.printStackTrace();
         }
     }
-    public static String register(LoginRequest loginRequest){
+    public static String register(UserInfo loginRequest){
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(serverUrl + "/auth/register"))
                 .POST(BodyPublishers.ofString(gson.toJson(loginRequest)))// Use the correct method

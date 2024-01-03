@@ -99,7 +99,12 @@ public class borrowFrameController {
     }
     @FXML
     public void onRefresh(ActionEvent event){
-        userquery=-1;
+        String role=Appstore.getRole();
+        if(role.equals("user")){
+            userquery=Appstore.getId();
+        }else{
+            userquery=-1;
+        }
         bookquery="";
         refresh();
     }

@@ -3,6 +3,7 @@ package com.example.controller;
 import cn.hutool.captcha.CaptchaUtil;
 import cn.hutool.captcha.LineCaptcha;
 import com.example.HttpMethod;
+import com.example.Base.UserInfo;
 import com.example.Request.LoginRequest;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -74,7 +75,7 @@ public class RegController {
             refresh();
             return;
         }
-        HttpMethod.register(new LoginRequest(username, password));
+        HttpMethod.register(new UserInfo(username, password));
         MessageDialog.showDialog("注册成功，请登录");
         Stage now =(Stage)reg.getScene().getWindow();
         now.fireEvent(new WindowEvent(now, WindowEvent.WINDOW_CLOSE_REQUEST));

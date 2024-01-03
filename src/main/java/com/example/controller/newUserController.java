@@ -1,6 +1,7 @@
 package com.example.controller;
 
 import com.example.HttpMethod;
+import com.example.Base.UserInfo;
 import com.example.Request.LoginRequest;
 
 import javafx.event.ActionEvent;
@@ -36,7 +37,7 @@ public class newUserController {
             MessageDialog.showDialog("密码不能为空");
             return;
         }
-        HttpMethod.register(new LoginRequest(username, password));
+        HttpMethod.register(new UserInfo(username, password));
         Stage now = (Stage) newuser.getScene().getWindow();
         now.fireEvent(new WindowEvent(now, WindowEvent.WINDOW_CLOSE_REQUEST));
     }
